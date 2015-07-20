@@ -1,0 +1,40 @@
+{% set v = 1 %}
+{% macro link_css_remote(remote_path) %}
+  {% with %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ remote_path }}" />
+  {% endwith %}
+{% endmacro %}
+
+{% macro link_css(css_path) %}
+  {% with %}
+    {% set link_path = url_for('static', filename='css/'+css_path) %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ link_path }}?v={{ v|string }}" />
+  {% endwith %}
+{% endmacro %}
+
+{% macro link_js_remote(remote_path) %}
+  {% with %}
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="{{ remote_path }}">
+    </script>
+  {% endwith %}
+{% endmacro %}
+
+{% macro link_js(js_path) %}
+  {% with %}
+    {% set link_path = url_for('static', filename='js/'+js_path) %}
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="{{ link_path }}?v={{ v|string }}">
+    </script>
+  {% endwith %}
+{% endmacro %}

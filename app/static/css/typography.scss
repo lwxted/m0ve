@@ -1,0 +1,86 @@
+.typography {
+  $font-family: 'Source Sans Pro', 'Helvetica', sans-serif;
+  $code-font-family: 'Menlo', monospace;
+  $typography-width: 700px;
+  $span-counter-color: #999;
+  $header-color: #333;
+  $p-color: #444;
+
+  font-family: $font-family;
+  margin: 30px;
+  width: $typography-width;
+
+  span.counter {
+    color: $span-counter-color;
+    cursor: pointer;
+    margin-right: 18px;
+  }
+
+  p {
+    color: $p-color;
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 15px 0 15px 0;
+
+    code {
+      font-family: $code-font-family;
+      font-size: 13px;
+      margin-left: 2px;
+      margin-right: 2px;
+      word-spacing: -1px;
+    }
+  }
+
+  @mixin header($font-size, $margin-top) {
+    color: $header-color;
+    font-size: $font-size;
+    font-weight: 600;
+    margin: $margin-top 0 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+
+    span.section-counter {
+      font-size: $font-size - 2;
+      vertical-align: 1px;
+    }
+
+    code {
+      font-family: $code-font-family;
+      font-size: $font-size - 2;
+      margin-left: 1px;
+      margin-right: 1px;
+      letter-spacing: 1px;
+      word-spacing: -2px;
+    }
+  }
+
+  h1 {
+    @include header(30px, 30px);
+    word-spacing: 4px;
+    margin: 30px 0 20px 0;
+  }
+
+  h2 {
+    @include header(20px, 30px);
+    word-spacing: 4px;
+  }
+
+  h3 {
+    @include header(18px, 28px);
+    word-spacing: 3px;
+  }
+
+  h4 {
+    @include header(16px, 25px);
+  }
+
+  h5 {
+    @include header(15px, 22px);
+  }
+
+  span.section-counter:hover {
+    background-color: $span-counter-color;
+    color: #fff;
+  }
+}

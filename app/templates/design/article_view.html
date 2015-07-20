@@ -1,0 +1,30 @@
+{% import 'macros.html' as macros %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    {{ macros.link_css_remote('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic,700') }}
+    {{ macros.link_css('typography.css') }}
+    <title>Article View</title>
+  </head>
+  <body>
+    <div class="typography">
+      <h1>15462 Lecture Notes</h1>
+      <h2><span class="counter section-counter">1</span>Swift language peculiarities</h2>
+      <p>The nil coalescing operator (a ?? b) unwraps an Optional a if it contains a value, or returns a default value b if a is nil. The expression a is always of an Optional type. The expression b must match the type that is stored inside a.</p>
+      <p>For assignments such as var b = a, where a is a structure, a copy is made. In comparison, if a is a class, a copy is not made and only a reference to the same object is created.</p>
+      <p>As a result, String, Array, Dictionary assignments always result in a new copy, since they are implemented as structures; while NSString, NSArray, NSDictionary assignments result in two references to a same object, since they are implemented as classes.</p>
+      <p>However note that when structures are copied, a COW mechanism is present to ensure optimal performance, according to Apple doc.</p>
+      <h3><span class="counter section-counter">1.1</span>Copying behavior of function argument passing / assignment</h3>
+      <h4><span class="counter section-counter">1.1.1</span>Nested struct approach</h4>
+      <p>As a result, String, Array, Dictionary assignments always result in a new copy, since they are implemented as structures; while NSString, NSArray, NSDictionary assignments result in two references to a same object, since they are implemented as classes.</p>
+      <h5><span class="counter section-counter">1.1.1.1</span>Traditional Objective-C dispatch_once approach</h5>
+      <p>As a result, String, Array, Dictionary assignments always result in a new copy, since they are implemented as structures; while NSString, NSArray, NSDictionary assignments result in two references to a same object, since they are implemented as classes.</p>
+      <h4><span class="counter section-counter">1.1.2</span>Using Swift and Objective-C code in the same project</h4>
+      <p>As a result, String, Array, Dictionary assignments always result in a new copy, since they are implemented as structures; while NSString, NSArray, NSDictionary assignments result in two references to a same object, since they are implemented as classes.</p>
+      <h3><span class="counter section-counter">1.2</span>Shared global instance / singleton in Swift</h3>
+      <h3><span class="counter section-counter">1.3</span>Using Swift and Objective-C code in the same project</h3>
+    </div>
+  </body>
+</html>

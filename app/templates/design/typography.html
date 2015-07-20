@@ -1,0 +1,21 @@
+{% import 'macros.html' as macros %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    {{ macros.link_css_remote('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic,700') }}
+    {{ macros.link_css('typography.css') }}
+    <title>Typography</title>
+  </head>
+  <body>
+    <div class="typography">
+      <h1>Article title</h1>
+      <h2><span class="counter section-counter">1</span>Header 1 <code>with code</code></h2>
+      <h3><span class="counter section-counter">1.1</span>Header 2 <code>with code</code></h3>
+      <h4><span class="counter section-counter">1.1.1</span>Header 3 <code>with code</code></h4>
+      <h5><span class="counter section-counter">1.1.1.1</span>Header 4 <code>with code</code></h5>
+      <p>The nil coalescing operator <code>(a ?? b)</code> unwraps an <code>Optional a</code> if it contains a value, or returns a default value <code>b</code> if <code>a</code> is <code>nil</code>. The expression <code>a</code> is always of an <code>Optional</code> type. The expression <code>b</code> must match the type that is stored inside <code>a</code>.</p>
+    </div>
+  </body>
+</html>
