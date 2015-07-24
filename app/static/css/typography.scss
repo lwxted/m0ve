@@ -1,19 +1,18 @@
-.typography {
+@import 'header';
+
+.article {
   $font-family: 'Source Sans Pro', 'Helvetica', sans-serif;
-  $code-font-family: 'Menlo', monospace;
-  $typography-width: 700px;
+  $article-content-width: 45%;
   $span-counter-color: #999;
-  $header-color: #333;
   $p-color: #444;
 
   font-family: $font-family;
-  margin: 30px;
-  width: $typography-width;
+  width: $article-content-width;
 
   span.counter {
     color: $span-counter-color;
     cursor: pointer;
-    margin-right: 18px;
+    margin-right: 12px;
   }
 
   p {
@@ -31,52 +30,27 @@
     }
   }
 
-  @mixin header($font-size, $margin-top) {
-    color: $header-color;
-    font-size: $font-size;
-    font-weight: 600;
-    margin: $margin-top 0 15px 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-
-    span.section-counter {
-      font-size: $font-size - 2;
-      vertical-align: 1px;
-    }
-
-    code {
-      font-family: $code-font-family;
-      font-size: $font-size - 2;
-      margin-left: 1px;
-      margin-right: 1px;
-      letter-spacing: 1px;
-      word-spacing: -2px;
-    }
-  }
-
   h1 {
-    @include header(30px, 30px);
+    @include header(30px, 30px, 20px);
     word-spacing: 4px;
-    margin: 30px 0 20px 0;
   }
 
   h2 {
-    @include header(20px, 30px);
+    @include header(20px, 30px, 20px);
     word-spacing: 4px;
   }
 
   h3 {
-    @include header(18px, 28px);
+    @include header(18px, 30px, 20px);
     word-spacing: 3px;
   }
 
   h4 {
-    @include header(16px, 25px);
+    @include header(16px, 25px, 15px);
   }
 
   h5 {
-    @include header(15px, 22px);
+    @include header(15px, 25px, 15px);
   }
 
   span.section-counter:hover {
